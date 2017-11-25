@@ -1,23 +1,21 @@
-require_relative('../db/sql_runner.rb')
-require_relative('./album.rb')
+require_relative("../db/sql_runner.rb")
 
 class Artist
 
-  attr_reader :id, :name, :album_id
+  attr_reader :id, :name
 
   def initialize(options)
     @id = options['id'].to_i
     @name = options['name']
-    @album_id = options['album_id'].to_i
   end
 
   def save
     sql = "INSERT INTO artists
-    (title, quantity, album_id)
+    (name)
     VALUES
-    ($1, $2, $3)
+    ($1)
     RETURNING *"
-    values = [@title, @quantity, @album_id]
+    values = [@name]
     album = SqlRunner.run(sql, values)
     @id = album.first['id'].to_i
   end
@@ -25,9 +23,9 @@ class Artist
   def update()
     sql = "UPDATE artists
     SET
-    (title, quantity, album_id) = ($1, $2, $3)
-    WHERE id = $4"
-    values = [@title, @quantity, @album_id, @id]
+    name = $1
+    WHERE id = $2"
+    values = [@name, @id]
     SqlRunner.run(sql, values)
   end
 
