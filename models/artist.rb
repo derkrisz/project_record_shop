@@ -52,18 +52,18 @@ class Artist
     sql = "SELECT * FROM artists
     WHERE id = $1"
     values = [id]
-    artist = SqlRunner.run[sql, values]
-    result = Artist.new(artist.first)
+    artist = SqlRunner.run(sql, values).first
+    result = Artist.new(artist)
     return result
   end
 
   def albums
-    sql = "SELECT * FROM albums
+    sql = "SELECT albums.* FROM albums
     INNER JOIN artists ON artists.id = albums.artist_id
-    WHERE artist_id = $1"
+    WHERE artists.id = $1"
     values = [@id]
     albums = SqlRunner.run(sql, values)
-    result = Artist.new(artist.first)
+    result = albums.map { |album| Album.new(album)}
     return result
   end
 

@@ -6,7 +6,7 @@ class Album
   attr_reader :id, :title, :quantity, :artist_id
 
   def initialize(options)
-    @id = options['id']
+    @id = options['id'].to_i
     @title = options['title']
     @quantity = options['quantity'].to_i
     @artist_id = options['artist_id'].to_i
@@ -55,9 +55,15 @@ class Album
     sql = "SELECT * FROM albums
     WHERE id = $1"
     values = [id]
-    album = SqlRunner.run[sql, values]
+    album = SqlRunner.run(sql, values)
     result = Album.new(album.first)
     return result
+  end
+
+  def self.stock
+    sql = "SELECT SUM (quantity) FROM albums"
+    stock = SqlRunner.run(sql)[0]["sum"].to_i
+    return stock
   end
 
 end
