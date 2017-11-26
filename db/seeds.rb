@@ -1,5 +1,6 @@
 require_relative('../models/album.rb')
 require_relative('../models/artist.rb')
+require('pry-byebug')
 
 Album.delete_all
 Artist.delete_all
@@ -57,3 +58,6 @@ album3.save
 album4.save
 album5.save
 album6.save
+
+# binding.pry
+# nil

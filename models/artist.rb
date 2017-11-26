@@ -57,4 +57,14 @@ class Artist
     return result
   end
 
+  def albums
+    sql = "SELECT * FROM albums
+    INNER JOIN artists ON artists.id = albums.artist_id
+    WHERE artist_id = $1"
+    values = [@id]
+    albums = SqlRunner.run(sql, values)
+    result = Artist.new(artist.first)
+    return result
+  end
+
 end
