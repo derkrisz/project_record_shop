@@ -3,7 +3,7 @@
 </form>
 
 <% @artists.each do |artist| %>
-<p><a href="/default/index/<%= artist.id %>"><%= artist.name %> </p>
+<p><a href="/artists/<%= artist.id %>"><%= artist.name %> </p>
   <form method="post" action="/artist/<%= artist.id %>">
     <input type="hidden" name="_method" value="delete">
     <button>Delete artist</button>

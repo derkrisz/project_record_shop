@@ -62,8 +62,8 @@ class Artist
     INNER JOIN artists ON artists.id = albums.artist_id
     WHERE artists.id = $1"
     values = [@id]
-    albums = SqlRunner.run(sql, values)
-    result = albums.map { |album| Album.new(album)}
+    albums = SqlRunner.run(sql, values).first
+    result = Album.new(albums)
     return result
   end
 

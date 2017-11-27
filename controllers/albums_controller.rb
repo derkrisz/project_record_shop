@@ -3,6 +3,11 @@ require('sinatra/reloader')
 require_relative('../models/album.rb')
 require_relative('../models/artist.rb')
 
+#INDEX
+get '/album' do
+  @albums = Album.all
+  erb ( :"album/index" )
+end
 
 #NEW
 get '/album/new' do

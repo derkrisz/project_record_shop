@@ -1,0 +1,12 @@
+<form method="get" action="/artists">
+  <button>Back to artists</button>
+</form>
+
+<p> <%= @artist.name %></p>
+<ul>
+<% @albums.each do |album|  %>
+<li>
+  <%= album.title %> <%= album.quantity %>
+</li>
+<% end %>
+</ul>
