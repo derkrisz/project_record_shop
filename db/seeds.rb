@@ -18,7 +18,7 @@ artist4.save
 
 album1 = Album.new({
   'title' => 'Davidian',
-  'quantity' => 2,
+  'quantity' => 5,
   'artist_id' => artist1.id
   })
 
@@ -30,7 +30,7 @@ album2 = Album.new({
 
 album3 = Album.new({
   'title' => 'The Burning Red',
-  'quantity' => 3,
+  'quantity' => 8,
   'artist_id' => artist1.id
   })
 
@@ -48,7 +48,7 @@ album5 = Album.new({
 
 album6 = Album.new({
   'title' => 'Miasma',
-  'quantity' => 1,
+  'quantity' => 13,
   'artist_id' => artist3.id
   })
 

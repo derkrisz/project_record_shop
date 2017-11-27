@@ -66,4 +66,14 @@ class Album
     return stock
   end
 
+  def stock_level
+    if @quantity > 10
+      return "High stock"
+    elsif @quantity < 5
+      return "Low stock"
+    else
+      return "Medium stock"
+    end
+  end
+
 end
