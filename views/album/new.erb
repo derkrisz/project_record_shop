@@ -1,0 +1,43 @@
+<form method="get" action="/">
+  <button>Back to main page</button>
+</form>
+
+<form method="post" action="/album">
+
+  <div class="field-group">
+    <label for="name-field" class="label">Artist name:</label>
+    <div class="field">
+      <select name="artist_id" id="artist-selection">
+        <% @artists.each do |artist| %>
+        <option value=<%= artist.id %>><%= artist.name %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="title-field" class="label">Album title:</label>
+    <div class="field">
+      <input
+      type="text"
+      name="title"
+      id="title-field"
+      placeholder="Album title"
+      required
+      />
+    </div>
+  </div>
+
+  <div class="field-group">
+  <label for="quantity-field" class="label">Quantity:</label>
+  <div class="field">
+    <input
+      type="number"
+      name="quantity"
+      id="quantity-field"
+    />
+  </div>
+</div>
+
+<button>Add album</button>
+</form>
