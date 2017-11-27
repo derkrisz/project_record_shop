@@ -1,12 +1,10 @@
-<form method="get" action="/default">
-  <button>Back to main page</button>
+<form method="get" action="/artist">
+<button type="submit">Show artists</button>
 </form>
-
-<% @artists.each do |artist| %>
-<p><a href="/default/index/<%= artist.id %>"><%= artist.name %> </p>
-  <form method="post" action="/default/index/<%= artist.id %>">
-    <input type="hidden" name="_method" value="delete">
-    <button>Delete artist</button>
-  </form>
-
-  <% end %>
+<form method="get" action="/artist/new">
+<button type="submit">Add new artist</button>
+</form>
+<p>You have % items in stock</p>
+<form method="get" action="/artist">
+<button type="submit">Check stock</button>
+</form>
