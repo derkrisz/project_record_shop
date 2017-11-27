@@ -4,7 +4,10 @@
 <form method="get" action="/artist/new">
 <button type="submit">Add new artist</button>
 </form>
-<p>You have % items in stock</p>
+<form method="get" action="/album/new">
+<button type="submit">Add new album</button>
+</form>
+<p>You have <%= @stock %> items in stock</p>
 <form method="get" action="/artist">
 <button type="submit">Check stock</button>
 </form>
