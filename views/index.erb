@@ -8,6 +8,10 @@
 <button type="submit">Add new album</button>
 </form>
 <p>You have <%= @stock %> items in stock</p>
-<form method="get" action="/album">
+<form method="get" action="/inventory">
 <button type="submit">Check inventory</button>
 </form>
+
+<% @albums.each do |album| %>
+<p><%=album.artist.name%> <%= album.title %> <%=album.quantity %> <%= album.stock_level %> </p>
+  <% end %>
