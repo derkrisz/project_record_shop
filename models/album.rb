@@ -3,7 +3,7 @@ require_relative("./artist.rb")
 
 class Album
 
-  attr_reader :id, :title, :quantity, :artist_id
+  attr_accessor :id, :title, :quantity, :artist_id
 
   def initialize(options)
     @id = options['id'].to_i
@@ -74,6 +74,17 @@ class Album
     else
       return "Medium stock"
     end
+  end
+
+  def artist
+    sql = "SELECT * FROM albums
+    INNER JOIN artists
+    ON artists.id = albums.artist_id
+    WHERE albums.id = $1"
+    values = [@id]
+    artist = SqlRunner.run(sql, values).first
+    result = Artist.new(artist)
+    return result
   end
 
 end
