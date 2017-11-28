@@ -19,37 +19,55 @@ artist4.save
 album1 = Album.new({
   'title' => 'Davidian',
   'quantity' => 5,
-  'artist_id' => artist1.id
+  'artist_id' => artist1.id,
+  'buy_price' => 10,
+  'sell_price' => 15,
+  'genre' => 'metal'
   })
 
 album2 = Album.new({
   'title' => 'The More Things Change',
   'quantity' => 1,
-  'artist_id' => artist1.id
+  'artist_id' => artist1.id,
+  'buy_price' => 11,
+  'sell_price' => 16,
+  'genre' => 'metal'
   })
 
 album3 = Album.new({
   'title' => 'The Burning Red',
   'quantity' => 8,
-  'artist_id' => artist1.id
+  'artist_id' => artist1.id,
+  'buy_price' => 9,
+  'sell_price' => 12,
+  'genre' => 'metal'
   })
 
 album4 = Album.new({
   'title' => 'Korn',
   'quantity' => 3,
-  'artist_id' => artist2.id
+  'artist_id' => artist2.id,
+  'buy_price' => 10,
+  'sell_price' => 12,
+  'genre' => 'nu metal'
   })
 
 album5 = Album.new({
   'title' => 'Life Is Peachy',
   'quantity' => 2,
-  'artist_id' => artist2.id
+  'artist_id' => artist2.id,
+  'buy_price' => 7,
+  'sell_price' => 12,
+  'genre' => 'nu metal'
   })
 
 album6 = Album.new({
   'title' => 'Miasma',
   'quantity' => 13,
-  'artist_id' => artist3.id
+  'artist_id' => artist3.id,
+  'buy_price' => 15,
+  'sell_price' => 16,
+  'genre' => 'melodic death metal'
   })
 
 album1.save
