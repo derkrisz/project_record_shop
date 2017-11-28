@@ -10,8 +10,8 @@ class Album
     @title = options['title']
     @quantity = options['quantity'].to_i
     @artist_id = options['artist_id'].to_i
-    @buy_price = options['buy_price'].to_i
-    @sell_price = options['sell_price'].to_i
+    @buy_price = options['buy_price'].to_f
+    @sell_price = options['sell_price'].to_f
     @genre = options['genre']
   end
 
@@ -78,6 +78,11 @@ class Album
     else
       return "Medium stock"
     end
+  end
+
+  def markup
+    markup = ((@buy_price/@sell_price)*100).to_i
+    return "#{markup}%"
   end
 
   def artist
