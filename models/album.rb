@@ -19,7 +19,7 @@ class Album
     sql = "INSERT INTO albums
     (title, quantity, artist_id, buy_price, sell_price, genre)
     VALUES
-    ($1, $2, $3, $4, $5)
+    ($1, $2, $3, $4, $5, $6)
     RETURNING *"
     values = [@title, @quantity, @artist_id, @buy_price, @sell_price, @genre]
     album = SqlRunner.run(sql, values)
