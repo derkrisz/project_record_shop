@@ -13,5 +13,5 @@
 </form>
 
 <% @albums.each do |album| %>
-<p><%=album.artist.name%> <%= album.title %> <%=album.quantity %> <%= album.stock_level %> </p>
+<p><%=album.artist.name%> <%=album.title%> <%=album.quantity%> <%= album.stock_level%> <%=album.sell_price%> </p>
   <% end %>
