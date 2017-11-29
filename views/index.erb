@@ -22,7 +22,7 @@
 <tr>
   <th>Artist name</th>
   <th>Abum title</th>
-  <th>Album quantity</th>
+  <th>Genre</th>
   <th>Sell price</th>
   <th>Stock level</th>
 </tr>
@@ -30,12 +30,13 @@
 <% @albums.each do |album| %>
 <td><%=album.artist.name%></td>
 <td><%=album.title%></td>
+<td><%=album.genre%></td>
 <td><%=album.quantity%></td>
 <td><%=album.sell_price.to_i%>
-<td><%=album.stock_level%></td>
+<td class="<%=album.stock_css%>"><%=album.stock_level%></td>
 <td>
-  <form method="get" action="/album/new">
-    <button type="submit">Edit stock</button>
+  <form method="get" action="/albums/<%= album.id %>">
+    <button type="submit">Album info</button>
   </form>
 </td>
 </tr>
