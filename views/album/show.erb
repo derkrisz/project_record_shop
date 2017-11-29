@@ -14,9 +14,15 @@
 <td><%= @album.buy_price.to_i %></td>
 <td><%= @album.sell_price.to_i %></td>
 <td><%= @album.markup %></td>
-<td><form method="get" action="/albums/<%= @album.id %>/edit">
-  <button type="submit">Edit details</button>
-</form></td>
+<td>
+  <form method="get" action="/albums/<%= @album.id %>/edit">
+  <button type="submit">Edit details</button></td>
+</form>
+<td>
+  <form method="post" action="/albums/<%= @album.id %>">
+    <input type="hidden" name="_method" value="delete">
+    <button>Clear quantity</button></td>
+</form>
 
 </tr>
 </table>
