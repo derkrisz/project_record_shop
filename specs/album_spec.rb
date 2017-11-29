@@ -30,4 +30,11 @@ class TestAlbum < MiniTest::Test
         assert_equal('Low stock', result2)
       end
 
+      def test_stock_css
+        result = @album1.stock_css
+        result2 = @album2.stock_css
+        assert_equal('medium_stock', result)
+        assert_equal('low_stock', result2)
+      end
+
     end
