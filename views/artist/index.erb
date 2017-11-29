@@ -1,17 +1,19 @@
-<form method="get" action="/">
-  <button>Back to main page</button>
-</form>
-
 <table>
-<% @artists.each do |artist| %>
-<tr>
-<a href="/artists/<%= artist.id %>"><%= artist.name %>
-<tr>  <form method="post" action="/artist/<%= artist.id %>">
-      <input type="hidden" name="_method" value="delete">
-      <button>Delete artist</button>
-    </form>
-  </tr>
-</tr>
+  <tr>
+    <% @artists.each do |artist| %>
+    <td><a href="/artists/<%= artist.id %>"><%= artist.name %></td>
+      <td>
+        <td> <form method="post" action="/artist/<%= artist.id %>">
+          <input type="hidden" name="_method" value="delete">
+          <button>Delete artist</button>
+        </form>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+  
+  <br>
 
-  <% end %>
-</table>
+  <form method="get" action="/">
+    <button>Back to main page</button>
+  </form>
