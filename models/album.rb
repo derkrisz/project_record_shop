@@ -82,6 +82,18 @@ class Album
     end
   end
 
+  def stock_css
+    if @quantity == 0
+      return "stock_out"
+    elsif @quantity > 10
+      return "high_stock"
+    elsif @quantity < 5
+      return "low_stock"
+    else
+      return "medium_stock"
+    end
+  end
+
   def markup
     margin = @sell_price-@buy_price
     markup = ((margin/@buy_price)*100).to_i
