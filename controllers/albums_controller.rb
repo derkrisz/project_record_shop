@@ -1,5 +1,6 @@
 require('sinatra')
 require('sinatra/reloader')
+require('pry-byebug')
 require_relative('../models/album.rb')
 require_relative('../models/artist.rb')
 
@@ -37,5 +38,12 @@ end
 #UPDATE
 put '/albums/:id' do
   Album.new( params ).update
+  redirect to '/albums/' + params['id']
+end
+
+#DELETE
+delete '/albums/:id' do
+  album = Album.find( params[:id] )
+  album.nullify_quantity
   redirect to '/albums/' + params['id']
 end
