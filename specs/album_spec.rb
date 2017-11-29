@@ -37,4 +37,9 @@ class TestAlbum < MiniTest::Test
         assert_equal('low_stock', result2)
       end
 
+      def test_markup
+        result = @album1.markup
+        assert_equal("50%", result)
+      end
+      
     end
