@@ -97,11 +97,8 @@ class Album
   end
 
   def nullify_quantity
-    quantity = @quantity
-    until quantity == 0
-      quantity -= 1
-    end
-    return quantity
+    @quantity = 0
+    self.update
   end
 
 end
