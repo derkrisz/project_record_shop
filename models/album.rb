@@ -96,4 +96,12 @@ class Album
     return result
   end
 
+  def nullify_quantity
+    quantity = @quantity
+    until quantity == 0
+      quantity -= 1
+    end
+    return quantity
+  end
+
 end
