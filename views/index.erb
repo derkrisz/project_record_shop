@@ -1,16 +1,22 @@
-<form method="get" action="/artists">
-<button type="submit">Show artists</button>
-</form>
-<form method="get" action="/artist/new">
-<button type="submit">Add new artist</button>
-</form>
-<form method="get" action="/album/new">
-<button type="submit">Add new album</button>
-</form>
+<table>
+  <tr>
+    <form method="get" action="/artists">
+      <button type="submit">Show artists</button>
+    </form>
+  </tr>
+  <tr>
+    <form method="get" action="/artist/new">
+      <button type="submit">Add new artist</button>
+    </form>
+  </tr>
+  <tr>
+    <form method="get" action="/album/new">
+      <button type="submit">Add new album</button>
+    </form>
+  </tr>
+</table>
+
 <p>You have <%= @stock %> items in stock</p>
-<form method="get" action="/inventory">
-<button type="submit">Check inventory</button>
-</form>
 
 <table>
 <tr>
@@ -26,7 +32,12 @@
 <td><%=album.title%></td>
 <td><%=album.quantity%></td>
 <td><%=album.sell_price.to_i%>
-<td><%= album.stock_level%></td>
+<td><%=album.stock_level%></td>
+<td>
+  <form method="get" action="/album/new">
+    <button type="submit">Edit stock</button>
+  </form>
+</td>
 </tr>
   <% end %>
 </table>
