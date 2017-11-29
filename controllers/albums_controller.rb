@@ -21,3 +21,21 @@ post '/album' do
   @album.save()
 erb ( :"album/create" )
 end
+
+#SHOW
+get '/albums/:id' do
+  @album = Album.find( params[:id] )
+  erb ( :"album/show")
+end
+
+#EDIT
+get '/albums/:id/edit' do
+  @album = Album.find( params[:id] )
+  erb( :"album/edit" )
+end
+
+#UPDATE
+put '/albums/:id' do
+  Album.new( params ).update
+  redirect to '/albums/' + params['id']
+end
