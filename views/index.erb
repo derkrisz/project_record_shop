@@ -12,6 +12,21 @@
 <button type="submit">Check inventory</button>
 </form>
 
+<table>
+<tr>
+  <th>Artist name</th>
+  <th>Abum title</th>
+  <th>Album quantity</th>
+  <th>Sell price</th>
+  <th>Stock level</th>
+</tr>
+<tr>
 <% @albums.each do |album| %>
-<p><%=album.artist.name%> <%=album.title%> <%=album.quantity%> <%= album.stock_level%> <%=album.sell_price%> </p>
+<td><%=album.artist.name%></td>
+<td><%=album.title%></td>
+<td><%=album.quantity%></td>
+<td><%=album.sell_price.to_i%>
+<td><%= album.stock_level%></td>
+</tr>
   <% end %>
+</table>
