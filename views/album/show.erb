@@ -1,0 +1,28 @@
+<table>
+  <tr>
+    <th>Artist name</td>
+    <th>Title</td>
+    <th>Quantity</td>
+    <th>Buy price</td>
+    <th>Sell price</td>
+    <th>Markup</td>
+  </tr>
+  <tr>
+<td><%= @album.artist.name %></td>
+<td><%= @album.title %></td>
+<td><%= @album.quantity %></td>
+<td><%= @album.buy_price.to_i %></td>
+<td><%= @album.sell_price.to_i %></td>
+<td><%= @album.markup %></td>
+<td><form method="get" action="/albums/<%= @album.id %>/edit">
+  <button type="submit">Edit details</button>
+</form></td>
+
+</tr>
+</table>
+
+<br>
+
+<form method="get" action="/">
+  <button>Back to main page</button>
+</form>

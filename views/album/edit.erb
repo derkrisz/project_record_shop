@@ -1,0 +1,84 @@
+<form method="get" action="/albums/<%= @album.id %>">
+  <button>Back to album details</button>
+</form>
+
+<form method="post" action="/albums/<%= @album.id %>">
+  <input type="hidden" name="_method" value="put">
+
+  <!-- <div class="field-group">
+    <label for="artist-field">Artist:</label>
+    <div class="field"> -->
+      <!-- <input
+      type="text"
+      name="artist"
+      id="artist-field"
+      value="<%= @album.artist.name %>"
+      /> -->
+    <!-- </div>
+  </div> -->
+
+  <!-- <div class="field-group">
+    <label for="title-field">Album title:</label> -->
+    <!-- <div class="field">
+      <input
+      type="text"
+      name="title"
+      id="title-field"
+      value="<%= @album.title %>"
+      />
+    </div> -->
+  </div>
+  <input name="artist_id" type="hidden" value="<%=@album.artist_id%>"/>
+  <input name="title" type="hidden" value="<%=@album.title%>"/>
+
+
+  <div class="field-group">
+    <label for="quantity-field">Quantity:</label>
+    <div class="field">
+      <input
+      type="number"
+      name="quantity"
+      id="quantity-field"
+      value="<%= @album.quantity %>"
+      />
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="buy_price-field">Buy price:</label>
+    <div class="field">
+      <input
+      type="number"
+      name="buy_price"
+      id="buy_price-field"
+      value="<%= @album.buy_price.to_i %>"
+      />
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="sell_price-field">Sell price:</label>
+    <div class="field">
+      <input
+      type="number"
+      name="sell_price"
+      id="sell_price-field"
+      value="<%= @album.sell_price.to_i %>"
+      />
+    </div>
+  </div>
+
+  <div class="field-group">
+    <label for="genre-field">Genre:</label>
+    <div class="field">
+      <input
+      type="text"
+      name="genre"
+      id="genre-field"
+      value="<%= @album.genre %>"
+      />
+    </div>
+  </div>
+
+  <button>Update stock</button>
+</form>
