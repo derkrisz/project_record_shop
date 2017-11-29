@@ -2,11 +2,16 @@
   <button>Back to main page</button>
 </form>
 
+<table>
 <% @artists.each do |artist| %>
-<p><a href="/artists/<%= artist.id %>"><%= artist.name %> </p>
-  <form method="post" action="/artist/<%= artist.id %>">
-    <input type="hidden" name="_method" value="delete">
-    <button>Delete artist</button>
-  </form>
+<tr>
+<a href="/artists/<%= artist.id %>"><%= artist.name %>
+<tr>  <form method="post" action="/artist/<%= artist.id %>">
+      <input type="hidden" name="_method" value="delete">
+      <button>Delete artist</button>
+    </form>
+  </tr>
+</tr>
 
   <% end %>
+</table>
