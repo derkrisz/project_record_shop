@@ -1,0 +1,15 @@
+.stock_out {
+  background-color: red;
+}
+
+.low_stock {
+  background-color: orange;
+}
+
+.medium_stock {
+  background-color: yellow;
+}
+
+.high_stock {
+  background-color: chartreuse;
+}
