@@ -71,7 +71,9 @@ class Album
   end
 
   def stock_level
-    if @quantity > 10
+    if @quantity == 0
+      return "Out of stock"
+    elsif @quantity > 10
       return "High stock"
     elsif @quantity < 5
       return "Low stock"
@@ -81,7 +83,8 @@ class Album
   end
 
   def markup
-    markup = ((@buy_price/@sell_price)*100).to_i
+    margin = @sell_price-@buy_price
+    markup = ((margin/@buy_price)*100).to_i
     return "#{markup}%"
   end
 
