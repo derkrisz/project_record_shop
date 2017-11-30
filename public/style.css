@@ -1,3 +1,10 @@
+.index_buttons {
+  text-align: center;
+}
+
+.main_buttons {
+  display: inline-block;
+}
 
 #stock_counter {
   text-align: center;
