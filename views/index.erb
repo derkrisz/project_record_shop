@@ -26,7 +26,7 @@
 <td><%=album.artist.name%></td>
 <td><%=album.title%></td>
 <td><%=album.genre%></td>
-<td><%=album.sell_price.to_i%>
+<td><%=album.sell_price.to_i%> £</td>
 <td class="<%=album.stock_css%>"><%=album.stock_level%></td>
 <td>
   <form method="get" action="/albums/<%= album.id %>">
