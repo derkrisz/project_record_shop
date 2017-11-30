@@ -15,10 +15,11 @@
     </form>
   </tr>
 </table>
+</nav>
 
 <p>You have <%= @stock %> items in stock</p>
 
-<table>
+<table class="tables">
 <tr>
   <th>Artist name</th>
   <th>Abum title</th>
@@ -31,7 +32,6 @@
 <td><%=album.artist.name%></td>
 <td><%=album.title%></td>
 <td><%=album.genre%></td>
-<td><%=album.quantity%></td>
 <td><%=album.sell_price.to_i%>
 <td class="<%=album.stock_css%>"><%=album.stock_level%></td>
 <td>

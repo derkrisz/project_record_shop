@@ -1,4 +1,4 @@
-<table>
+<table class="tables">
   <tr>
     <% @artists.each do |artist| %>
     <td><a href="/artists/<%= artist.id %>"><%= artist.name %></td>
@@ -11,7 +11,7 @@
     </tr>
     <% end %>
   </table>
-  
+
   <br>
 
   <form method="get" action="/">
