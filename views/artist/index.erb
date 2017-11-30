@@ -2,7 +2,6 @@
   <tr>
     <% @artists.each do |artist| %>
     <td><a href="/artists/<%= artist.id %>"><%= artist.name %></td>
-      <td>
         <td> <form method="post" action="/artist/<%= artist.id %>">
           <input type="hidden" name="_method" value="delete">
           <button>Delete artist</button>
