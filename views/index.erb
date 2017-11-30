@@ -2,15 +2,11 @@
 <table class ="main_buttons">
   <tr>
     <form method="get" action="/artists">
-      <button type="submit">Show artists</button>
+      <th><button type="submit">Show artists</button>
     </form>
-  </tr>
-  <tr>
     <form method="get" action="/artist/new">
       <button type="submit">Add new artist</button>
     </form>
-  </tr>
-  <tr>
     <form method="get" action="/album/new">
       <button type="submit">Add new album</button>
     </form>
@@ -27,6 +23,7 @@
   <th>Genre</th>
   <th>Sell price</th>
   <th>Stock level</th>
+  <th>Album info</th>
 </tr>
 <tr>
 <% @albums.each do |album| %>

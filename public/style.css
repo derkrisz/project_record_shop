@@ -1,36 +1,74 @@
+
+/*button formatters*/
 .index_buttons {
   text-align: center;
 }
 
-.main_buttons {
+button {
+  background: linear-gradient(to bottom, #3b679e 0%,#2b88d9 50%,#207cca 51%,#7db9e8 100%);
+  color: #FFF;
   display: inline-block;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+  font-family: Arial, sans-serif;
+  line-height: 1.4em;
+  padding: 0 1.5em;
+  text-decoration: none;
+}
+
+button:hover {
+box-shadow: inset 0 1px 1px rgba(255,255,255,0.2),
+inset 0 1.5em 1em rgba(255,255,255,0.3);
+}
+
+button:active {
+box-shadow: inset 0 1px 1px rgba(255,255,255,0.2),
+inset 0 1.5em 1em rgba(0,0,0,0.3);
 }
 
 #stock_counter {
+  font-family: "Trebuchet MS", sans-serif;
   text-align: center;
 }
 
 /*table formatters*/
 .tables {
+  font-family: "Trebuchet MS", sans-serif;
+  border-collapse: collapse;
   margin-left: auto;
   margin-right: auto;
-  width: 100%;
+  width: 92%;
   text-align: center;
 }
 
+.tables td, .tables th {
+  border: 1px solid #ddd;
+  padding: 3px;
+}
+
+.tables th {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background: linear-gradient(to bottom, #4096ee 0%,#4096ee 100%);
+
+}
+.tables tr:nth-child(even){background-color: #f2f2f2;}
+.tables tr:hover {background-color: #b3d1ff;}
+
+
 /*stock colour formatters*/
 .stock_out {
-  background-color: red;
+  background: linear-gradient(to bottom, #f85032 0%,#f16f5c 31%,#f02f17 71%,#e73827 100%);
 }
 
 .low_stock {
-  background-color: orange;
+  background: linear-gradient(to bottom, #f9c667 0%,#f79621 100%);
 }
 
 .medium_stock {
-  background-color: yellow;
+  background: linear-gradient(to bottom, #fefcea 0%,#f1da36 100%);
 }
 
 .high_stock {
-  background-color: chartreuse;
+  background: linear-gradient(to bottom, #b4e391 0%,#61c419 50%,#b4e391 100%);
 }
