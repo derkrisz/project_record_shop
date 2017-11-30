@@ -52,7 +52,8 @@ class Album
     sql = "SELECT * from albums"
     albums = SqlRunner.run(sql)
     result = albums.map {|album| Album.new(album) }
-    return result
+    sorted_result = result.sort {|album1, album2| album1.artist.name <=> album2.artist.name}
+    return sorted_result
   end
 
   def self.find(id)
@@ -62,6 +63,16 @@ class Album
     album = SqlRunner.run(sql, values)
     result = Album.new(album.first)
     return result
+  end
+
+  def self.find_sorted(id)
+    sql = "SELECT * FROM albums
+    WHERE id = $1"
+    values = [id]
+    album = SqlRunner.run(sql, values)
+    result = Album.new(album.first)
+    sorted_result = result.sort {|album1, album2| album1.title <=> album2.title}
+    return sorted_result
   end
 
   def self.stock

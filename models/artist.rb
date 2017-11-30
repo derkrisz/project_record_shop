@@ -46,7 +46,8 @@ class Artist
     sql = "SELECT * from artists"
     artists = SqlRunner.run(sql)
     result = artists.map {|artist| Artist.new(artist) }
-    return result
+    sorted_result = result.sort {|artist1, artist2| artist1.name <=> artist2.name}
+    return sorted_result
   end
 
   def self.find(id)
@@ -65,7 +66,8 @@ class Artist
     values = [@id]
     albums = SqlRunner.run(sql, values)
     result = albums.map { |album| Album.new(album)}
-    return result
+    sorted_result = result.sort {|album1, album2| album1.title <=> album2.title}
+    return sorted_result
   end
 
 end
