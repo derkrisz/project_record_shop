@@ -31,5 +31,5 @@ end
 delete '/artist/:id' do
   artist = Artist.find( params[:id] )
   artist.delete()
-  redirect to '/'
+  redirect to '/artists'
 end
