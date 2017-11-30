@@ -63,7 +63,7 @@ inset 0 1.5em 1em rgba(0,0,0,0.3);
 
 
 /*stock colour formatters*/
-.stock_out {
+.out_of_stock {
   background: linear-gradient(to bottom, #f85032 0%,#f16f5c 31%,#f02f17 71%,#e73827 100%);
 }
 

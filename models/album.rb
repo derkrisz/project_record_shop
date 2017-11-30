@@ -83,15 +83,17 @@ class Album
   end
 
   def stock_css
-    if @quantity == 0
-      return "stock_out"
-    elsif @quantity > 10
-      return "high_stock"
-    elsif @quantity < 5
-      return "low_stock"
-    else
-      return "medium_stock"
-    end
+    string_for_css = stock_level.downcase.tr(" ", "_")
+    return string_for_css
+    # if @quantity == 0
+    #   return "out_of_stock"
+    # elsif @quantity > 10
+    #   return "high_stock"
+    # elsif @quantity < 5
+    #   return "low_stock"
+    # else
+    #   return "medium_stock"
+    # end
   end
 
   def markup
