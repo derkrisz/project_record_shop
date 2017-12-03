@@ -8,10 +8,10 @@ Pull the files from Github for personal use, and install prerequisites.
 
 Prerequisites
 
--Ruby
--Postgres, or other SQL software
--Sinatra gems
--Browser for HTML/CSS
+1. Ruby
+2. Postgres, or other SQL software
+3. Sinatra gems
+4. Browser for HTML/CSS
 
 To start the program:
 
