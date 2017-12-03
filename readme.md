@@ -30,6 +30,6 @@ Authors
 
 Krisztian Der
 
-Acknowledegments
+Acknowledgements
 
 Tutors at CodeClan and classmates in Cohort 17.
