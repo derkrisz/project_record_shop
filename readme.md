@@ -17,10 +17,10 @@ To start the program:
 
 (After pulling the form Github to your required directory)
 
--Use the SQL file in db to create a database named record_shop
--Seed the database by using the seeds.rb file
--Start the Sinatra server with record_shop_controller.rb
--Navigate to localhost:4567/ in your browser to start the app.
+1. Use the SQL file in db to create a database named record_shop
+2. Seed the database by using the seeds.rb file
+3. Start the Sinatra server with record_shop_controller.rb
+4. Navigate to localhost:4567/ in your browser to start the app.
 
 Created With
 
