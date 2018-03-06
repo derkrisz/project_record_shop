@@ -1,4 +1,4 @@
-Rick's Records
+ # Rick's Records
 
 A simple stock tracker app for a record store. The user is available to add artists and albums, delete and edit the stock. It also has buy/sell prices and markup. and colour-coded stock level meter. The app was created using SQL, Ruby, HTML and CSS, and it communicates with a Postgres database.
 
