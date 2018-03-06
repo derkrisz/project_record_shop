@@ -1,8 +1,21 @@
- # Rick's Records
+# Rick's Records
 
 A stock tracker web app for a record store. The user is available to add artists and albums, delete and edit the stock. It also displays buy/sell prices, markup and has a colour-coded stock level meter.
 
-## Getting Started
+## MVP:
+
+- Create albums with the quantity that are in stock
+- Create artists
+- Show an inventory page listing albums and artists
+- Show a stock level for the inventory items e.g. High/Medium/Low
+## Possible Extensions:
+
+- Add a buy and sell price to each stock item
+- Calculate the possible markup on items and show on inventory page
+- Add a genre to an Album
+- Any other ideas you might come up with
+
+# Getting Started
 
 Pull the files from Github for personal use, and install prerequisites.
 
