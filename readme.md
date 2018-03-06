@@ -24,7 +24,7 @@ Pull the files from Github for personal use, and install prerequisites.
 
 Ruby, PostgreSQL, Sinatra, HTML and CSS
 
-### Authors
+#### Authors
 
 Krisztian Der
 
